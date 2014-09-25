@@ -1,22 +1,23 @@
 namespace Sitecore.FakeDb
 {
-  using System;
-  using System.Collections;
-  using System.Collections.Generic;
-  using System.Linq;
-  using Sitecore.Configuration;
-  using Sitecore.Data;
-  using Sitecore.Data.Items;
-  using Sitecore.Diagnostics;
-  using Sitecore.FakeDb.Configuration;
-  using Sitecore.FakeDb.Data.Engines;
-  using Sitecore.FakeDb.Pipelines;
-  using Sitecore.FakeDb.Pipelines.InitFakeDb;
-  using Sitecore.Globalization;
-  using Sitecore.Pipelines;
-  using Sitecore.Security.AccessControl;
-  using Sitecore.FakeDb.Data.Items;
-  using Sitecore.FakeDb.Security.AccessControl;
+    using System;
+    using System.Collections;
+    using System.Collections.Generic;
+    using System.Linq;
+    using Sitecore.Configuration;
+    using Sitecore.Data;
+    using Sitecore.Data.Items;
+    using Diagnostics;
+    using Configuration;
+    using Data.Engines;
+    using Pipelines;
+    using Pipelines.InitFakeDb;
+    using Globalization;
+    using Sitecore.Pipelines;
+    using Sitecore.Security.AccessControl;
+    using Data.Items;
+    using Security.AccessControl;
+    using Reflection;
 
   public class Db : IDisposable, IEnumerable
   {
@@ -35,8 +36,13 @@ namespace Sitecore.FakeDb
     private bool disposed;
 
     public Db()
-      : this("master")
+        : this("master")
     {
+    }
+
+    static Db()
+    {
+        NullLicenseManager.Activate();
     }
 
     public Db(string databaseName)
