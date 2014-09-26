@@ -1,5 +1,6 @@
 ﻿0.18.1
 * [FIX] Added Link Manager registration
+* [FIX] Fixed NullLicenseManager for 7.1 (license required)
 
 0.18.0
 * [NEW] Introduced Item Statistics

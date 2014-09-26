@@ -1,20 +1,25 @@
-using System.Reflection;
-using Sitecore.SecurityModel.License;
-
 namespace Sitecore.FakeDb.Reflection
 {
-    public static class NullLicenseManager
+  using System.Reflection;
+  using Sitecore.SecurityModel.License;
+
+  public static class NullLicenseManager
+  {
+    public static void Activate()
     {
-        public static void DemandRuntime(bool acceptExpress, bool forceUpdate)
-        {
-        }
+      MethodBase originalMethod = typeof(LicenseManager).GetMethod("DemandRuntime", BindingFlags.Static | BindingFlags.NonPublic, null, CallingConventions.Any, new[] { typeof(bool), typeof(bool) }, new[] { new ParameterModifier(2) });
+      if (originalMethod == null)
+      {
+        return;
+      }
 
-        public static void Activate()
-        {
-            MethodBase originalMethod = typeof(LicenseManager).GetMethod("DemandRuntime", BindingFlags.Static | BindingFlags.NonPublic, null, CallingConventions.Any, new[] { typeof(bool), typeof(bool) }, new[] { new ParameterModifier(2) });
-            MethodBase newMethod = typeof(NullLicenseManager).GetMethod("DemandRuntime", BindingFlags.Static | BindingFlags.Public);
+      MethodBase newMethod = typeof(NullLicenseManager).GetMethod("DemandRuntime", BindingFlags.Static | BindingFlags.Public);
 
-            MethodUtil.ReplaceMethod(newMethod, originalMethod);
-        }
+      MethodUtil.ReplaceMethod(newMethod, originalMethod);
     }
+
+    public static void DemandRuntime(bool acceptExpress, bool forceUpdate)
+    {
+    }
+  }
 }
