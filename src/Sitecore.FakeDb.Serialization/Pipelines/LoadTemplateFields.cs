@@ -15,7 +15,7 @@
       Assert.ArgumentNotNull(template, "Item was not a DsDbTemplate, which is required here");
 
       foreach (var descendantItem in template.File
-        .DeserializeAll(template.SyncItem, Deserializer.GetSerializationFolder(template.SerializationFolderName), 3)
+        .DeserializeAll(template.SyncItem, DeserializerExtensions.GetSerializationFolder(template.SerializationFolderName), 3)
         .Where(i => ID.IsID(i.TemplateID) && ID.Parse(i.TemplateID) == TemplateIDs.TemplateField))
       {
         var isSharedField = descendantItem.SharedFields.FirstOrDefault(f => "Shared".Equals(f.FieldName));

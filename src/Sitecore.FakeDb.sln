@@ -1,8 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
-MinimumVisualStudioVersion = 10.0.40219.1
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sitecore.FakeDb", "Sitecore.FakeDb\Sitecore.FakeDb.csproj", "{B1B3C599-9284-4653-9F22-FD0F726984BB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sitecore.FakeDb.Tests", "Sitecore.FakeDb.Tests\Sitecore.FakeDb.Tests.csproj", "{D7EE44EE-1306-4EB6-9514-471905AAA493}"
@@ -40,6 +38,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sitecore.FakeDb.AutoFixture", "Sitecore.FakeDb.AutoFixture\Sitecore.FakeDb.AutoFixture.csproj", "{E1503D66-F2EB-4EC0-829E-F29447DBF92A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sitecore.FakeDb.AutoFixture.Tests", "Sitecore.FakeDb.AutoFixture.Tests\Sitecore.FakeDb.AutoFixture.Tests.csproj", "{DB78AA82-9043-443E-8D23-6E1478C84820}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sitecore.FakeDb.Serialization.Rainbow", "Sitecore.FakeDb.Serialization.Rainbow\Sitecore.FakeDb.Serialization.Rainbow.csproj", "{22227C68-B9B6-410A-875F-F423666C394E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sitecore.FakeDb.Serialization.Rainbow.Tests", "Sitecore.FakeDb.Serialization.Rainbow.Tests\Sitecore.FakeDb.Serialization.Rainbow.Tests.csproj", "{74F4F047-C7AB-43BA-B0F3-9C25C51AC8E1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -79,6 +81,14 @@ Global
 		{DB78AA82-9043-443E-8D23-6E1478C84820}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DB78AA82-9043-443E-8D23-6E1478C84820}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DB78AA82-9043-443E-8D23-6E1478C84820}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22227C68-B9B6-410A-875F-F423666C394E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22227C68-B9B6-410A-875F-F423666C394E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22227C68-B9B6-410A-875F-F423666C394E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22227C68-B9B6-410A-875F-F423666C394E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74F4F047-C7AB-43BA-B0F3-9C25C51AC8E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74F4F047-C7AB-43BA-B0F3-9C25C51AC8E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74F4F047-C7AB-43BA-B0F3-9C25C51AC8E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74F4F047-C7AB-43BA-B0F3-9C25C51AC8E1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

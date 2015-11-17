@@ -27,7 +27,7 @@
     }
 
     public DsDbTemplate(string path, string serializationFolderName)
-      : this(Deserializer.ResolveSerializationPath(path, serializationFolderName), serializationFolderName)
+      : this(DeserializerExtensions.ResolveSerializationPath(path, serializationFolderName), serializationFolderName)
     {
     }
 
@@ -37,7 +37,7 @@
     }
 
     internal DsDbTemplate(FileInfo file, string serializationFolderName)
-      : this(serializationFolderName, file.Deserialize(), file)
+      : this(serializationFolderName, file.Deserialize(DeserializerExtensions.GetSerializationFolder(serializationFolderName)), file)
     {
     }
 

@@ -49,8 +49,10 @@
       <Link>Properties\AssemblyVersionInfo.cs</Link>
     </Compile>
     <Compile Include="Deserializer.cs" />
+    <Compile Include="DeserializerExtensions.cs" />
     <Compile Include="DsDbItem.cs" />
     <Compile Include="DsDbTemplate.cs" />
+    <Compile Include="IDeserializer.cs" />
     <Compile Include="Pipelines\CopySharedFields.cs" />
     <Compile Include="Pipelines\CopyVersionedFields.cs" />
     <Compile Include="Pipelines\DeserializeDescendants.cs" />

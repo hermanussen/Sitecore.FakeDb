@@ -22,7 +22,7 @@
         else
         {
           pathSet = new SerializedIdToPathSet();
-          var serializationFolder = Deserializer.GetSerializationFolder(serializationFolderName);
+          var serializationFolder = DeserializerExtensions.GetSerializationFolder(serializationFolderName);
 
           // Add filepaths for shortened paths
           foreach (

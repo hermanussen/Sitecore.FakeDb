@@ -30,7 +30,7 @@
     }
 
     public DsDbItem(string path, string serializationFolderName, bool includeDescendants = false, bool deserializeLinkedTemplate = true)
-      : this(serializationFolderName, Deserializer.ResolveSerializationPath(path, serializationFolderName), includeDescendants, deserializeLinkedTemplate)
+      : this(serializationFolderName, DeserializerExtensions.ResolveSerializationPath(path, serializationFolderName), includeDescendants, deserializeLinkedTemplate)
     {
     }
 
@@ -40,7 +40,7 @@
     }
 
     internal DsDbItem(string serializationFolderName, FileInfo file, bool includeDescendants = false, bool deserializeLinkedTemplate = true)
-      : this(serializationFolderName, file.Deserialize(), file, includeDescendants, deserializeLinkedTemplate)
+        : this(serializationFolderName, file.Deserialize(DeserializerExtensions.GetSerializationFolder(serializationFolderName)), file, includeDescendants, deserializeLinkedTemplate)
     {
     }
 

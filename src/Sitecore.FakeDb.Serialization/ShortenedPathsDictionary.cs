@@ -26,7 +26,7 @@
       return path;
     }
 
-    internal static Dictionary<string, string> GetLocationsFromLinkFiles(DirectoryInfo serializationFolder)
+      public static Dictionary<string, string> GetLocationsFromLinkFiles(DirectoryInfo serializationFolder)
     {
       lock (ShortenedPaths)
       {

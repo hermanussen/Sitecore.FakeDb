@@ -33,7 +33,7 @@
       foreach (var itemFile in childItemsFolder.GetFiles("*.item", SearchOption.TopDirectoryOnly))
       {
         DbItem childItem;
-        var syncItem = itemFile.Deserialize();
+        var syncItem = itemFile.Deserialize(DeserializerExtensions.GetSerializationFolder(dsDbItem.SerializationFolderName));
 
         if (syncItem.TemplateID == TemplateIDs.Template.ToString())
         {

@@ -1,0 +1,16 @@
+﻿---
+ID: 981e21b8-9a6b-44f3-af3e-0fd01d6075cd
+Parent: 0de95ae4-41ab-4d01-9eb0-67441b7c2450
+Template: a87a00b1-e6db-45ab-8b54-636fec3b5523
+Path: /sitecore/content/Very very very long path 1
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: 25bed78c-4957-4165-998a-ca1b52f67497
+      # __Created
+      Value: 20151117T124157Z
+    - ID: 5dd74568-4d4b-44c1-b513-0af5f4cda34f
+      # __Created by
+      Value: sitecore\admin
