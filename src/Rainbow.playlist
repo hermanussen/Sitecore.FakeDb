@@ -1,0 +1,9 @@
+<Playlist Version="1.0">
+	<Add Test="Sitecore.FakeDb.Serialization.Rainbow.Tests.DeserializerTest.ShouldDeserializeFile" />
+	<Add Test="Sitecore.FakeDb.Serialization.Rainbow.Tests.DeserializerTest.ShouldDeserializeItemName" />
+	<Add Test="Sitecore.FakeDb.Serialization.Rainbow.Tests.DeserializerTest.ShouldDeserializeTemplateId" />
+	<Add Test="Sitecore.FakeDb.Serialization.Rainbow.Tests.DeserializerTest.ShouldDeserializeParentId" />
+	<Add Test="Sitecore.FakeDb.Serialization.Rainbow.Tests.DeserializerTest.ShouldDeserializeItemPath" />
+	<Add Test="Sitecore.FakeDb.Serialization.Rainbow.Tests.DeserializerTest.ShouldDeserializeSharedField" />
+	<Add Test="Sitecore.FakeDb.Serialization.Rainbow.Tests.DeserializerTest.ShouldDeserializeVersionedField" />
+</Playlist>

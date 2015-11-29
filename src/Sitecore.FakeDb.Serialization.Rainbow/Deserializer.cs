@@ -3,8 +3,6 @@
     using System;
     using System.Collections.Generic;
     using System.IO;
-    using System.Linq;
-    using System.Text;
     using Sitecore.Data.Serialization.ObjectModel;
     using Sitecore.Diagnostics;
     using global::Rainbow.Model;
@@ -27,7 +25,7 @@
 
             using (var ms = file.OpenRead())
             {
-                IItemData item = formatter.ReadSerializedItem(ms, "unittest.yml");
+                IItemData item = formatter.ReadSerializedItem(ms, "not needed");
                 SyncItem syncItem = new SyncItem()
                     {
                         BranchId = item.BranchId.ToString(),
@@ -37,7 +35,7 @@
                         Name = item.Name,
                         ParentID = item.ParentId.ToString(),
                         TemplateID = item.TemplateId.ToString(),
-                        TemplateName = "todo: templatename"
+                        TemplateName = null // this is not used in FakeDb anyway
                     };
                 foreach (IItemVersion itemVersion in item.Versions)
                 {
